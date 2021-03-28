@@ -74,17 +74,17 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-༆_Hello ! i am_[𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉](https://media.giphy.com/media/w5msivcjcmheq/giphy.gif)
-_Im here to help you manage your groups! Hit_ *❲❯❯HELP❮❮❳* _button below And Know more._
+༆_Hello ! i am_[*𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉*](https://t.me/PRINCESS_SUPPORT/45)
+`*I'm here to help you manage your groups! Hit*` *❲❯❯HELP❮❮❳* `_button below to find out more about how to use me to my all available Commands_` 
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="❲❯❯ADD ME TO YOUR GROUP❮❮❳", url="t.me/MeThePrincess_Bot?startgroup=true"),
+            text="❲❯❯ADD ME TO YOUR GROUP❮❮❳", url="t.me/{}?startgroup=true"),
     ],
     [
-        InlineKeyboardButton(text="❲❯❯×VID×❮❮❳", callback_data="masha_"),
+        InlineKeyboardButton(text="❲❯❯ABOUT❮❮❳", callback_data="masha_"),
         InlineKeyboardButton(text="❲❯❯HELP❮❮❳", callback_data="help_back"),
     ],
     [
@@ -98,8 +98,8 @@ buttons = [
 
 
 HELP_STRINGS = """
-_Hello I Am_  [𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉](https://media.giphy.com/media/w5MSivCJcmHEQ/giphy.gif)
-༆ _HERE IS ALL BELOW ALL WITH AVAILABLE BUTTUNS WITH MODULES AND CHOOSE WHAT YOU WANT_."""
+_Hello I Am  [*𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉*](https://t.me/PRINCESS_SUPPORT/45)
+༆ HERE IS ALL  BELOW ALL WITH AVAILABLE BUTTUNS WITH MODULES AND CHOOSE WHAT YOU WANT_."""
 
 
 DONATE_STRING = """😶No need.. I'm rich"""
@@ -347,7 +347,16 @@ def Masha_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "masha_":
         query.message.edit_text(
-            text="""HERE IS [PRINCESS](https://media.giphy.com/media/w5MSivCJcmHEQ/giphy.gif),""",
+            text=""" _Hello I Am [❲😉❯❯PRINCESS❮❮😉❳ ](https://telegra.ph/file/7563a424b45dabe8af169.mp4) a powerful group management bot built to help you manage your group easily.
+                 ❍➠ I can restrict users.
+                 ❍➠ I can greet users with customizable welcome messages and even set a group's rules.
+                 ❍➠ I have an advanced anti-flood system.
+                 ❍➠ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
+                 ❍➠ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
+                 ❍➠ I check for admins' permissions before executing any command and more stuffs.
+                 𒊹︎︎︎➪Here is the [❲❯❯DEV-INFO❮❮❳](https://t.me/Mr_Purushottam_M).
+                 If you have any question about 𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉, let us know at @PRINCESS_SUPPORT.
+                 """,
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -373,15 +382,8 @@ def Source_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" _Hello I Am_ [𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉]() _a powerful group management bot built to help you manage your group easily._
-                 ⛹️Here is the [❲❯❯𝚂𝙰𝚄𝚁𝙲𝙴❮❮❳](https://t.me/PRINCESS_SUPPORT/48).
-                 ❍➠ I can restrict users.
-                 ❍➠ I can greet users with customizable welcome messages and even set a group's rules.
-                 ❍➠ I have an advanced anti-flood system.
-                 ❍➠ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
-                 ❍➠ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
-                 ❍➠ I check for admins' permissions before executing any command and more stuffs
-                  ༆𒊹︎︎︎➪If you have any question about 𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉, let us know at @PRINCESS_SUPPORT.""",
+            text=""" Hi..🤗 I'm *𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉*
+                 \nHere is the [❲❯❯SAURCE CODE❮❮❳](https://t.me/PRINCESS_SUPPORT/48) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=False,
             reply_markup=InlineKeyboardMarkup(
