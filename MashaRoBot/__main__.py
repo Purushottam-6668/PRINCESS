@@ -367,7 +367,7 @@ def Masha_about_callback(update: Update, context: CallbackContext):
                 disable_web_page_preview=False,
         )
 
-by 
+
 @run_async
 def Source_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
