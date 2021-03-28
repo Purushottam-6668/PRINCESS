@@ -1,101 +1,218 @@
+  Mr-Dark-Prince
+
+/
+
+MashaRoBot
+
+4
+
+2539
+
+Code
+
+Issues
+
+Pull requests
+
+Discussions
+
+Actions
+
+Projects
+
+Wiki
+
+Security
+
+More
+
+MashaRoBot/MashaRoBot/__main__.py /
+
+@Mr-Dark-Prince
+
+Mr-Dark-Prince Update __main__.py
+
+Latest commit b21a106 20 hours ago
+
+ History
+
+ 1 contributor
+
+741 lines (640 sloc)  24.9 KB
+
+ 
+
 import importlib
+
 import time
+
 import re
+
 from sys import argv
+
 from typing import Optional
 
 from MashaRoBot import (
+
     ALLOW_EXCL,
+
     CERT_PATH,
+
     DONATION_LINK,
+
     LOGGER,
+
     OWNER_ID,
+
     PORT,
+
     SUPPORT_CHAT,
+
     TOKEN,
+
     URL,
+
     WEBHOOK,
+
     SUPPORT_CHAT,
+
     dispatcher,
+
     StartTime,
+
     telethn,
+
     pbot,
+
     updater,
+
 )
 
 # needed to dynamically load modules
+
 # NOTE: Module order is not guaranteed, specify that in the config file!
+
 from MashaRoBot.modules import ALL_MODULES
+
 from MashaRoBot.modules.helper_funcs.chat_status import is_user_admin
+
 from MashaRoBot.modules.helper_funcs.misc import paginate_modules
+
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
+
 from telegram.error import (
+
     BadRequest,
+
     ChatMigrated,
+
     NetworkError,
+
     TelegramError,
+
     TimedOut,
+
     Unauthorized,
+
 )
+
 from telegram.ext import (
+
     CallbackContext,
+
     CallbackQueryHandler,
+
     CommandHandler,
+
     Filters,
+
     MessageHandler,
+
 )
+
 from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
+
 from telegram.utils.helpers import escape_markdown
 
-
 def get_readable_time(seconds: int) -> str:
+
     count = 0
+
     ping_time = ""
+
     time_list = []
+
     time_suffix_list = ["s", "m", "h", "days"]
 
     while count < 4:
+
         count += 1
+
         remainder, result = divmod(seconds, 60) if count < 3 else divmod(seconds, 24)
+
         if seconds == 0 and remainder == 0:
+
             break
+
         time_list.append(int(result))
+
         seconds = int(remainder)
 
     for x in range(len(time_list)):
+
         time_list[x] = str(time_list[x]) + time_suffix_list[x]
+
     if len(time_list) == 4:
+
         ping_time += time_list.pop() + ", "
 
     time_list.reverse()
+
     ping_time += ":".join(time_list)
 
     return ping_time
 
-
 PM_START_TEXT = """
-`Hellow *{}* [*𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉*](https://telegra.ph/file/2e147376a5953bbd6cf3c.jpg)
-`I'm here to help you manage your groups! Hit` *❯❯HEP❮❮* `button below to find out more about how to use me to my full potential.` 
+
+`Hellow My name is` *Masha*
+
+`I'm here to help you manage your groups! Hit` *📚Commands* `button below to find out more about how to use me to my full potential.` 
+
 """
 
 buttons = [
-    [
-        InlineKeyboardButton(
-            text="᎒❯❯ADD ME TO YOUR GROUP❮❮᎒", url="t.me/{}?startgroup=true"),
-    ],
-    [
-        InlineKeyboardButton(text="᎒❯❯ABOUT❮❮᎒", callback_data="masha_"),
-        InlineKeyboardButton(text="᎒❯❯HELP❮❮", callback_data="help_back"),
-    ],
-    [
-        InlineKeyboardButton(
-            text="᎒❯❯SAURCE❮❮᎒", callback_data="source_"),
-        InlineKeyboardButton(
-            text="᎒❯❯SUPPORT❮❮᎒", url="https://t.me/PRINCESS_SUPPORT"
-        ),
-    ],
-]
 
+    [
+
+        InlineKeyboardButton(
+
+            text="➕️ ADD MASHA TO YOUR GROUP ➕️", url="t.me/MashaRoBot?startgroup=true"),
+
+    ],
+
+    [
+
+        InlineKeyboardButton(text="ℹ️ ABOUT", callback_data="masha_"),
+
+        InlineKeyboardButton(text="📚 COMMANDS", callback_data="help_back"),
+
+    ],
+
+    [
+
+        InlineKeyboardButton(
+
+            text="💾 SOURCE", callback_data="source_"),
+
+        InlineKeyboardButton(
+
+            text="👥 SUPPORT", url="https://t.me/wastebots"
+
+        ),
+
+    ],
+
+]
 
 HELP_STRINGS = """
 *Hello I Am  [*𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉*](https://t.me/PRINCESS_SUPPORT/40)
