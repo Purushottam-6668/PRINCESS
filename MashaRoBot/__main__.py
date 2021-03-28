@@ -81,7 +81,7 @@ PM_START_TEXT = """
 buttons = [
     [
         InlineKeyboardButton(
-            text="❲❯❯ADD ME TO YOUR GROUP❮❮❳", url="t.me/{}?startgroup=true"),
+            text="❲❯❯ADD ME TO YOUR GROUP❮❮❳", url="t.me/MeThePrincess_Bot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(text="❲❯❯ABOUT❮❮❳", callback_data="masha_"),
@@ -98,8 +98,8 @@ buttons = [
 
 
 HELP_STRINGS = """
-_Hello I Am  [*𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉*](https://t.me/PRINCESS_SUPPORT/45)
-༆ HERE IS ALL  BELOW ALL WITH AVAILABLE BUTTUNS WITH MODULES AND CHOOSE WHAT YOU WANT_."""
+_Hello I Am_  [*𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉*](https://t.me/PRINCESS_SUPPORT/45)
+༆ _HERE IS ALL  BELOW ALL WITH AVAILABLE BUTTUNS WITH MODULES AND CHOOSE WHAT YOU WANT_."""
 
 
 DONATE_STRING = """😶No need.. I'm rich"""
@@ -149,7 +149,6 @@ for module_name in ALL_MODULES:
     if hasattr(imported_module, "__user_settings__"):
         USER_SETTINGS[imported_module.__mod_name__.lower()] = imported_module
 
-
 # do not async
 def send_help(chat_id, text, keyboard=None):
     if not keyboard:
@@ -187,7 +186,7 @@ def start(update: Update, context: CallbackContext):
                     update.effective_chat.id,
                     HELPABLE[mod].__help__,
                     InlineKeyboardMarkup(
-                        [[InlineKeyboardButton(text="❲❯❯⛹️GO BACK⛹️ ❮❮❳", callback_data="help_back")]]
+                        [[InlineKeyboardButton(text="❲❯❯⛹️BACK⛹️ ❮❮❳", callback_data="help_back")]]
                     ),
                 )
 
@@ -347,7 +346,7 @@ def Masha_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "masha_":
         query.message.edit_text(
-            text=""" _Hello I Am [❲😉❯❯PRINCESS❮❮😉❳ ](https://telegra.ph/file/7563a424b45dabe8af169.mp4) a powerful group management bot built to help you manage your group easily.
+            text=""" _Hello I Am_ [❲😉❯❯PRINCESS❮❮😉❳ ](https://telegra.ph/file/7563a424b45dabe8af169.mp4) _a powerful group management bot built to help you manage your group easily_
                  ❍➠ I can restrict users.
                  ❍➠ I can greet users with customizable welcome messages and even set a group's rules.
                  ❍➠ I have an advanced anti-flood system.
@@ -355,7 +354,7 @@ def Masha_about_callback(update: Update, context: CallbackContext):
                  ❍➠ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
                  ❍➠ I check for admins' permissions before executing any command and more stuffs.
                  𒊹︎︎︎➪Here is the [❲❯❯DEV-INFO❮❮❳](https://t.me/Mr_Purushottam_M).
-                 If you have any question about 𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉, let us know at @PRINCESS_SUPPORT.
+                 If you have any question about *𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉*, let us know at @PRINCESS_SUPPORT.
                  """,
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
