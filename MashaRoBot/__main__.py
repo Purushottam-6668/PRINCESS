@@ -84,7 +84,7 @@ buttons = [
             text="❲❯❯ADD ME TO YOUR GROUP❮❮❳", url="t.me/MeThePrincess_Bot?startgroup=true"),
     ],
     [
-        InlineKeyboardButton(text="❲❯❯ABOUT❮❮❳", callback_data="masha_"),
+        InlineKeyboardButton(text="❲❯❯×VID×❮❮❳", callback_data="masha_"),
         InlineKeyboardButton(text="❲❯❯HELP❮❮❳", callback_data="help_back"),
     ],
     [
@@ -347,16 +347,7 @@ def Masha_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "masha_":
         query.message.edit_text(
-            text=""" _Hello I Am_ [𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉](https://media.giphy.com/media/w5MSivCJcmHEQ/giphy.gif) _a powerful group management bot built to help you manage your group easily._
-                 ❍➠ I can restrict users.
-                 ❍➠ I can greet users with customizable welcome messages and even set a group's rules.
-                 ❍➠ I have an advanced anti-flood system.
-                 ❍➠ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
-                 ❍➠ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
-                 ❍➠ I check for admins' permissions before executing any command and more stuffs
-                   𒊹︎︎︎➪ 𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉's licensed under the GNU General Public License v3.0_
-                 Here is the [❲❯❯DEV-INFO❮❮❳](https://t.me/PRINCESS_SUPPORT/48).
-                 If you have any question about 𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉, let us know at @PRINCESS_SUPPORT.""",
+            text="""HERE IS [PRINCESS](https://media.giphy.com/media/w5MSivCJcmHEQ/giphy.gif),""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -376,14 +367,21 @@ def Masha_about_callback(update: Update, context: CallbackContext):
                 disable_web_page_preview=False,
         )
 
-
+by 
 @run_async
 def Source_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi..🤗 I'm *𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉*
-                 \nHere is the [❲❯❯SAURCE CODE❮❮❳](https://t.me/PRINCESS_SUPPORT/48) .""",
+            text=""" _Hello I Am_ [𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉]() _a powerful group management bot built to help you manage your group easily._
+                 ⛹️Here is the [❲❯❯𝚂𝙰𝚄𝚁𝙲𝙴❮❮❳](https://t.me/PRINCESS_SUPPORT/48).
+                 ❍➠ I can restrict users.
+                 ❍➠ I can greet users with customizable welcome messages and even set a group's rules.
+                 ❍➠ I have an advanced anti-flood system.
+                 ❍➠ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
+                 ❍➠ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
+                 ❍➠ I check for admins' permissions before executing any command and more stuffs
+                  ༆𒊹︎︎︎➪If you have any question about 𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉, let us know at @PRINCESS_SUPPORT.""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=False,
             reply_markup=InlineKeyboardMarkup(
