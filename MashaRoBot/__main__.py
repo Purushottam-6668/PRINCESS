@@ -74,8 +74,8 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-༆_Hello ! i am_[*𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉*](https://media.giphy.com/media/w5msivcjcmheq/giphy.gif)
-`*I'm here to help you manage your groups! Hit*` *❲❯❯HELP❮❮❳* `_button below to find out more about how to use me to my all available Commands_` 
+༆_Hello ! i am_[𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉](https://media.giphy.com/media/w5msivcjcmheq/giphy.gif)
+_Im here to help you manage your groups! Hit_ *❲❯❯HELP❮❮❳* _button below And Know more._
 """
 
 buttons = [
@@ -99,7 +99,7 @@ buttons = [
 
 HELP_STRINGS = """
 _Hello I Am_  [𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉](https://media.giphy.com/media/w5MSivCJcmHEQ/giphy.gif)
-༆ _HERE IS ALL  BELOW ALL WITH AVAILABLE BUTTUNS WITH MODULES AND CHOOSE WHAT YOU WANT_."""
+༆ _HERE IS ALL BELOW ALL WITH AVAILABLE BUTTUNS WITH MODULES AND CHOOSE WHAT YOU WANT_."""
 
 
 DONATE_STRING = """😶No need.. I'm rich"""
@@ -354,8 +354,8 @@ def Masha_about_callback(update: Update, context: CallbackContext):
                  ❍➠ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
                  ❍➠ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
                  ❍➠ I check for admins' permissions before executing any command and more stuffs
-                 \n_𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉's licensed under the GNU General Public License v3.0_
-                 Here is the [❲❯❯DEV-INFO❮❮❳](https://t.me/Mr_Purushottam_M).
+                   𒊹︎︎︎➪ 𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉's licensed under the GNU General Public License v3.0_
+                 Here is the [❲❯❯DEV-INFO❮❮❳](https://t.me/PRINCESS_SUPPORT/48).
                  If you have any question about 𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉, let us know at @PRINCESS_SUPPORT.""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
