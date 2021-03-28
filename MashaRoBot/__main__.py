@@ -81,7 +81,7 @@ PM_START_TEXT = """
 buttons = [
     [
         InlineKeyboardButton(
-            text="❲❯❯ADD ME TO YOUR GROUP❮❮❳", url="t.me/{}?startgroup=true",format(context.bot.username)
+            text="❲❯❯ADD ME TO YOUR GROUP❮❮❳", url="t.me/MeThePrincess_Bot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(text="❲❯❯ABOUT❮❮❳", callback_data="masha_"),
