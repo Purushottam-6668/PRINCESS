@@ -81,11 +81,11 @@ PM_START_TEXT = """
 buttons = [
     [
         InlineKeyboardButton(
-            text="᎒❯❯ADD ME TO YOUR GROUP❮❮᎒", url="t.me/The_Princess2_Bot?startgroup=true"),
+            text="᎒❯❯ADD ME TO YOUR GROUP❮❮᎒", url="t.me/{}?startgroup=true"),
     ],
     [
-        InlineKeyboardButton(text="᎒❯❯HELP❮❮᎒", callback_data="masha_"),
-        InlineKeyboardButton(text=", callback_data="help_back"),
+        InlineKeyboardButton(text="᎒❯❯ABOUT❮❮᎒", callback_data="masha_"),
+        InlineKeyboardButton(text="᎒❯❯HELP❮❮", callback_data="help_back"),
     ],
     [
         InlineKeyboardButton(
@@ -418,7 +418,7 @@ def get_help(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="Help",
+                                text="᎒❯❯HELP❮❮᎒",
                                 url="t.me/{}?start=ghelp_{}".format(
                                     context.bot.username, module
                                 ),
