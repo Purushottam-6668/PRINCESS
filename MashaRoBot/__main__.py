@@ -81,7 +81,7 @@ PM_START_TEXT = """
 buttons = [
     [
         InlineKeyboardButton(
-            text="❲❯❯ADD ME TO YOUR GROUP❮❮❳", url="t.me/{}?startgroup=true"),
+            text="❲❯❯ADD ME TO YOUR GROUP❮❮❳", url="t.me/{}?startgroup=true",format(context.bot.username)
     ],
     [
         InlineKeyboardButton(text="❲❯❯ABOUT❮❮❳", callback_data="masha_"),
@@ -98,8 +98,8 @@ buttons = [
 
 
 HELP_STRINGS = """
-_Hello I Am  [*𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉*](https://media.giphy.com/media/w5MSivCJcmHEQ/giphy.gif)
-༆ HERE IS ALL  BELOW ALL WITH AVAILABLE BUTTUNS WITH MODULES AND CHOOSE WHAT YOU WANT_."""
+_Hello I Am_  [𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉](https://media.giphy.com/media/w5MSivCJcmHEQ/giphy.gif)
+༆ _HERE IS ALL  BELOW ALL WITH AVAILABLE BUTTUNS WITH MODULES AND CHOOSE WHAT YOU WANT_."""
 
 
 DONATE_STRING = """😶No need.. I'm rich"""
@@ -347,7 +347,7 @@ def Masha_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "masha_":
         query.message.edit_text(
-            text=""" _Hello I Am [*𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉*](https://media.giphy.com/media/w5MSivCJcmHEQ/giphy.gif) a powerful group management bot built to help you manage your group easily.
+            text=""" _Hello I Am_ [𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉](https://media.giphy.com/media/w5MSivCJcmHEQ/giphy.gif) _a powerful group management bot built to help you manage your group easily._
                  ❍➠ I can restrict users.
                  ❍➠ I can greet users with customizable welcome messages and even set a group's rules.
                  ❍➠ I have an advanced anti-flood system.
@@ -383,7 +383,7 @@ def Source_about_callback(update: Update, context: CallbackContext):
     if query.data == "source_":
         query.message.edit_text(
             text=""" Hi..🤗 I'm *𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉*
-                 \nHere is the [❲❯❯SAURCE CODE❮❮❳](https://github.com/Mr-Dark-Prince/MashaRoBot) .""",
+                 \nHere is the [❲❯❯SAURCE CODE❮❮❳](https://t.me/PRINCESS_SUPPORT/45) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=False,
             reply_markup=InlineKeyboardMarkup(
