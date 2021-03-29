@@ -94,13 +94,13 @@ def _check_member(client, message):
                             [
                                 [
                                     InlineKeyboardButton(
-                                        "Join Channel",
+                                        "❲❯❯JOIN CHANNEL❮❮❳",
                                         url="https://t.me/{}".format(channel),
                                     )
                                 ],
                                 [
                                     InlineKeyboardButton(
-                                        "UnMute Me", callback_data="onUnMuteRequest"
+                                        "❲❯❯UNMUTE ME❮❮❳", callback_data="onUnMuteRequest"
                                     )
                                 ],
                             ]
@@ -153,12 +153,12 @@ def config(client, message):
                     client.get_chat_member(input_str, "me")
                     sql.add_channel(chat_id, input_str)
                     message.reply_text(
-                        f"✅ **Force Subscribe is Enabled**\n__Force Subscribe is enabled, all the group members have to subscribe this [channel](https://t.me/{input_str}) in order to send messages in this group.__",
+                        f"✅ **Force Subscribe is Enabled**\n__Force Subscribe is enabled, all the group members have to subscribe this [❲❯❯JOIN❮❮❳](https://t.me/{input_str}) in order to send messages in this group.__",
                         disable_web_page_preview=True,
                     )
                 except UserNotParticipant:
                     message.reply_text(
-                        f"❗ **Not an Admin in the Channel**\n__I am not an admin in the [channel](https://t.me/{input_str}). Add me as a admin in order to enable ForceSubscribe.__",
+                        f"❗ **Not an Admin in the Channel**\n__I am not an admin in the [❲❯❯JOIN❮❮❳](https://t.me/{input_str}). Add me as a admin in order to enable ForceSubscribe.__",
                         disable_web_page_preview=True,
                     )
                 except (UsernameNotOccupied, PeerIdInvalid):
@@ -182,20 +182,20 @@ def config(client, message):
 __help__ = """
 *Force Subscribe:*
 
-❍ Masha can mute members who are not subscribed your channel until they subscribe
-❍ When enabled I will mute unsubscribed members and show them a unmute button. When they pressed the button I will unmute them
+➠Masha can mute members who are not subscribed your channel until they subscribe
+➠When enabled I will mute unsubscribed members and show them a unmute button. When they pressed the button I will unmute them
 
 *Setup*
 *Only creator*
-❍ Add me in your group as admin
-❍ Add me in your channel as admin 
+➠Add me in your group as admin
+➠Add me in your channel as admin 
  
 *Commmands*
- ❍ /fsub {channel username} - To turn on and setup the channel.
+➥/fsub {channel username} - To turn on and setup the channel.
   💡Do this first...
- ❍ /fsub - To get the current settings.
- ❍ /fsub disable - To turn of ForceSubscribe..
+➥/fsub - To get the current settings.
+➥/fsub disable - To turn of ForceSubscribe..
   💡If you disable fsub, you need to set again for working.. /fsub {channel username} 
- ❍ /fsub clear - To unmute all members who muted by me.
+➥/fsub clear - To unmute all members who muted by me.
 """
 __mod_name__ = "F SUB"
