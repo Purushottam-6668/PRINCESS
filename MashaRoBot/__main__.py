@@ -346,7 +346,7 @@ def Masha_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "masha_":
         query.message.edit_text(
-            text=""" _Hello I Am_ [❲😉❯❯PRINCESS❮❮😉❳ ](https://telegra.ph/file/7563a424b45dabe8af169.mp4) _a powerful group management bot built to help you manage your group easily_
+            text="""_Hello I Am_ [❲😉❯❯PRINCESS❮❮😉❳ ](https://telegra.ph/file/7563a424b45dabe8af169.mp4) _a powerful group management bot built to help you manage your group easily_
                  ❍➠ I can restrict users.
                  ❍➠ I can greet users with customizable welcome messages and even set a group's rules.
                  ❍➠ I have an advanced anti-flood system.
@@ -354,7 +354,7 @@ def Masha_about_callback(update: Update, context: CallbackContext):
                  ❍➠ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
                  ❍➠ I check for admins' permissions before executing any command and more stuffs.
                  𒊹︎︎︎➪Here is the [❲❯❯DEV-INFO❮❮❳](https://t.me/Mr_Purushottam_M).
-                 If you have any question about *𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉*, let us know at @PRINCESS_SUPPORT.
+                 If you have any question about So Go To Main Menu And Hit On Support 🔘 
                  """,
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
