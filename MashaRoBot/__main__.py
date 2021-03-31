@@ -74,7 +74,7 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-༆_Hello ! i am_[*𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉*](https://t.me/PRINCESS_SUPPORT/45)
+༆_Hello ! i am_[*𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉*](https://t.me/PRINCESS_SUPPORT/40)
 `*I'm here to help you manage your groups! Hit*` *❲❯❯HELP❮❮❳* `_button below to find out more about how to use me to my all available Commands_` 
 """
 
@@ -98,7 +98,7 @@ buttons = [
 
 
 HELP_STRINGS = """
-_Hello I Am_  [*𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉*](https://t.me/PRINCESS_SUPPORT/45)
+_Hello I Am_  [*𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉*](https://t.me/PRINCESS_SUPPORT/40)
 ༆ _HERE IS ALL  BELOW ALL WITH AVAILABLE BUTTUNS WITH MODULES AND CHOOSE WHAT YOU WANT_."""
 
 
@@ -346,7 +346,7 @@ def Masha_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "masha_":
         query.message.edit_text(
-            text="""_Hello I Am_ [❲😉❯❯PRINCESS❮❮😉❳ ](https://telegra.ph/file/7563a424b45dabe8af169.mp4) _a powerful group management bot built to help you manage your group easily_
+            text="""_Hello I Am_ [❲😉❯❯PRINCESS❮❮😉❳ ](https://t.me/PRINCESS_SUPPORT/52) _a powerful group management bot built to help you manage your group easily_
                  ❍➠ I can restrict users.
                  ❍➠ I can greet users with customizable welcome messages and even set a group's rules.
                  ❍➠ I have an advanced anti-flood system.
